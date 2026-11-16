@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shalokhin-artur.github.io/sitemap.xml

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff9ed">
+  <title>Morph Mouse — маленький хомяк, большое приключение</title>
+  <meta name="description" content="Уютный питомец и приключение до Луны. Заботься о хомяке, обустраивай комнату, меняй форму и проходи 70 уровней в 7 мирах. Скоро на iOS и Android.">
+  <link rel="canonical" href="https://shalokhin-artur.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Morph Mouse — маленький хомяк, большое приключение">
+  <meta property="og:description" content="Немного заботы. Немного смелости. И целый мир за дверью твоей комнаты.">
+  <meta property="og:url" content="https://shalokhin-artur.github.io/">
+  <meta property="og:image" content="https://shalokhin-artur.github.io/assets/social.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/app-icon.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/nunito.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/hero.webp" as="image">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержимому</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="Morph Mouse — главная"><img src="assets/app-icon.webp" width="48" height="48" alt=""><span>Morph<span class="brand-second">Mouse</span></span></a>
+    <nav aria-label="Главное меню"><a href="#adventure">Приключения</a><a href="#home">Уютный дом</a><a href="#outfits">Наряды</a></nav>
+    <a class="button small secondary" href="#release">Скоро на телефоне <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✦</span> Забота дома. Приключения за порогом.</p>
+        <h1 id="hero-title">Маленький хомяк.<br><span>Большое <br>приключение.</span></h1>
+        <p class="intro">Накорми. Обними. А теперь — к Луне!<br>Твой уютный питомец умеет менять форму<br class="desktop-br"> и находить выход из самых хитрых препятствий.</p>
+        <div class="hero-actions"><a class="button primary" href="#adventure">Заглянуть в игру <span aria-hidden="true">↗</span></a><span class="release-note">Готовимся к релизу<br><strong>iOS & Android</strong></span></div>
+      </div>
+      <div class="hero-art">
+        <div class="sun-disc" aria-hidden="true"></div>
+        <span class="orbit orbit-one" aria-hidden="true"></span><span class="orbit orbit-two" aria-hidden="true"></span>
+        <span class="art-spark spark-one" aria-hidden="true">✦</span><span class="art-spark spark-two" aria-hidden="true">✧</span>
+        <img class="floating-acorn" src="assets/acorn.webp" width="84" height="84" alt="">
+        <span class="hello-bubble" aria-hidden="true">Привет. Я твой!</span>
+        <button class="pet" id="pet" aria-label="Погладить хомяка"><img src="assets/hero.webp" width="1024" height="1024" alt="Улыбающийся золотистый хомяк Morph Mouse" fetchpriority="high"></button>
+        <span class="pet-hint">Можно погладить <span aria-hidden="true">↖</span></span>
+        <div class="hearts" id="hearts" aria-hidden="true"></div>
+        <p class="sr-only" id="pet-status" role="status"></p>
+      </div>
+    </section>
+    <div class="promise-strip"><div class="wrap promises"><span><img src="assets/star.webp" width="30" height="30" alt="">70 уровней</span><span class="strip-dot" aria-hidden="true">·</span><span>7 маленьких больших миров</span><span class="strip-dot" aria-hidden="true">·</span><span>Один очень твой хомяк</span></div></div>
+
+    <section class="section wrap adventure" id="adventure" aria-labelledby="adventure-title">
+      <div class="section-heading"><div><p class="eyebrow">За дверью — целое приключение</p><h2 id="adventure-title">Мир большой.<br>Ты — <em>очень гибкий.</em></h2></div><p>Вытянись, чтобы протиснуться. Стань плоским, чтобы проскользнуть. Выбери нужную форму — и даже обычная кухня станет полосой приключений.</p></div>
+      <div class="world-view">
+        <img id="world-image" src="assets/kitchen.webp" width="1536" height="768" alt="Хомяк на кухонном уровне: деревянные платформы, лазеры и светящиеся жёлуди" loading="lazy">
+        <div class="world-caption"><div><span id="world-count">МИР 02 / 07</span><h3 id="world-name">Кухня</h3></div><span class="scene-note">Кадр из игры</span></div>
+        <div class="world-controls"><button id="world-prev" aria-label="Предыдущий мир">←</button><button id="world-next" aria-label="Следующий мир">→</button></div>
+      </div>
+      <div class="world-tabs" aria-label="Выбрать игровой мир">
+        <button data-world="0" aria-pressed="false">01 <span>Подвал</span></button><button data-world="1" aria-pressed="true">02 <span>Кухня</span></button><button data-world="2" aria-pressed="false">03 <span>Гостиная</span></button><button data-world="3" aria-pressed="false">04 <span>Чердак</span></button><button data-world="4" aria-pressed="false">05 <span>Крыша</span></button><button data-world="5" aria-pressed="false">06 <span>Ракета</span></button><button data-world="6" aria-pressed="false">07 <span>Луна</span></button>
+      </div>
+      <p class="world-status sr-only" role="status" id="world-status"></p>
+      <div class="adventure-foot"><span><strong>«Путь к Луне»</strong> — от первых прыжков до настоящей невесомости.</span><span>Собирай жёлуди. Зарабатывай звёзды.</span></div>
+    </section>
+
+    <section class="home-section" id="home" aria-labelledby="home-title"><div class="wrap home-grid">
+      <div class="home-picture"><img src="assets/room.webp" width="1600" height="900" alt="Комната хомяка с кроваткой, колесом, лампой-грибом и круглым окном в осенний лес" loading="lazy"><span class="photo-tag"><span aria-hidden="true">♡</span> Хорошо, когда тебя ждут</span></div>
+      <div class="home-copy"><p class="eyebrow">После приключений — домой</p><h2 id="home-title">Место для<br>маленького<br><em>счастья.</em></h2><p>Здесь можно просто побыть вместе. Угостить любимым сыром, поиграть с мячиком и уложить хомяка спать.</p><p>А жёлуди из приключений превратить в кроватку, уютный свет и комнату, которую хочется назвать своей.</p><div class="care-list"><span>Угощай</span><span>Играй</span><span>Обустраивай</span><span>Обнимай</span></div></div>
+    </div></section>
+
+    <section class="section wrap" id="more" aria-labelledby="more-title">
+      <div class="section-heading compact"><div><p class="eyebrow">А какое сегодня настроение?</p><h2 id="more-title">Ещё чуть-чуть<br><em>поиграем?</em></h2></div><p>За личным рекордом или за вкусняшкой.<br>У хомяка всегда найдётся план.</p></div>
+      <div class="modes">
+        <article class="mode"><div class="mode-image"><img src="assets/runner.webp" width="1600" height="900" alt="Бесконечный бег хомяка по игровым платформам" loading="lazy"><span class="mode-number">01</span></div><div class="mode-text"><p class="eyebrow">Проверим реакцию</p><h3>Бесконечный бег</h3><p>Прыгай, меняй форму и успевай увернуться. Впереди новые препятствия, хитрый кот и твой следующий рекорд.</p></div></article>
+        <article class="mode"><div class="mode-image"><img src="assets/treats.webp" width="1280" height="600" alt="Ловля угощений: хомяк ловит падающую еду" loading="lazy"><span class="mode-number">02</span></div><div class="mode-text"><p class="eyebrow">Кто тут проголодался?</p><h3>Ловля угощений</h3><p>Лови сыр, морковку и семечки. Уклоняйся от неприятных сюрпризов — и возвращайся домой сытым и довольным.</p></div></article>
+      </div>
+    </section>
+
+    <section class="outfits-section" id="outfits" aria-labelledby="outfits-title"><div class="wrap outfits-grid">
+      <div><p class="eyebrow">Тот же хомяк. Новый характер.</p><h2 id="outfits-title">Сегодня пират.<br>Завтра — <em>акула.</em></h2><p>Собирай наряды, сочетай шапки и аксессуары. Добавь необычный след — и отправляйся покорять уровни в своём стиле.</p><div class="outfit-choices" aria-label="Примерить наряд"><button data-outfit="astronaut" aria-pressed="false">Космонавт</button><button data-outfit="pirate" aria-pressed="true">Пират</button><button data-outfit="shark" aria-pressed="false">Акула</button></div><p class="outfit-note" id="outfit-note" aria-live="polite">За сокровищами! Наряд из игровой коллекции.</p></div>
+      <div class="outfit-stage"><span class="outfit-star" aria-hidden="true">✧</span><img id="outfit-image" src="assets/pirate.webp" width="1024" height="1024" alt="Хомяк в пиратской шляпе и повязке на глазу" loading="lazy"><span class="outfit-label">Гардероб маленького героя</span></div>
+    </div></section>
+
+    <section class="section wrap faq" aria-labelledby="faq-title"><div><p class="eyebrow">Ещё пара маленьких подробностей</p><h2 id="faq-title">Любопытно?</h2></div><div class="questions">
+      <details><summary>Это питомец или платформер?<span aria-hidden="true">+</span></summary><p>И то и другое. Дома ты заботишься о хомяке и обустраиваешь комнату. В приключениях — прыгаешь, меняешь форму и собираешь жёлуди для новых покупок.</p></details>
+      <details><summary>Нужен ли постоянный интернет?<span aria-hidden="true">+</span></summary><p>Основная игра работает офлайн: комната, уровни, бесконечный бег и ловля угощений. Интернет нужен для рекламы, покупок и некоторых сервисных функций.</p></details>
+      <details><summary>Где можно скачать игру?<span aria-hidden="true">+</span></summary><p>Мы готовим Morph Mouse к релизу на iOS и Android. Когда игра станет доступна, здесь появятся ссылки на магазины. Пока можно <a href="mailto:shalokhin.artur@gmail.com?subject=Morph%20Mouse%20%E2%80%94%20%D1%80%D0%B5%D0%BB%D0%B8%D0%B7">написать нам</a> и спросить о релизе.</p></details>
+      <details><summary>В игре есть покупки и реклама?<span aria-hidden="true">+</span></summary><p>В мобильной версии предусмотрены дополнительные крутки нарядов, реклама за награду и рекламные паузы между раундами. Отдельная разовая покупка отключает рекламу на месяц, без автопродления.</p></details>
+    </div></section>
+
+    <section class="release-section wrap" id="release" aria-labelledby="release-title"><div class="release-card"><img src="assets/app-icon.webp" width="112" height="112" alt="Иконка Morph Mouse" loading="lazy"><p class="eyebrow">Твой маленький друг уже собирается</p><h2 id="release-title">Встретимся<br>на твоём телефоне.</h2><p>Morph Mouse готовится к релизу на iOS и Android.<br>Первое большое приключение ещё впереди.</p><a class="button primary" href="mailto:shalokhin.artur@gmail.com?subject=Morph%20Mouse%20%E2%80%94%20%D1%80%D0%B5%D0%BB%D0%B8%D0%B7">Написать о релизе <span aria-hidden="true">↗</span></a><span class="release-platforms">iOS <span aria-hidden="true">·</span> Android <span aria-hidden="true">·</span> Скоро</span></div></section>
+  </main>
+  <footer class="site-footer wrap"><a class="brand" href="./"><img src="assets/app-icon.webp" width="38" height="38" alt=""><span>Morph<span class="brand-second">Mouse</span></span></a><p>Маленький мир. Много тепла.<br><small>© 2026 Artur Shalokhin</small></p><div><a href="privacy.html">Конфиденциальность</a><a href="support.html">Поддержка</a><a href="mailto:shalokhin.artur@gmail.com">Написать нам ↗</a></div></footer>
+</body>
+</html>
